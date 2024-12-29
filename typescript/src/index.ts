@@ -10,7 +10,10 @@
 // import "./tipos/uniao";
 // import "./tipos/never";
 // import "./tipos/null";
-import "./tipos/desafioContaCorrente";
+// import "./tipos/desafioContaCorrente";
+// import "./oo/class_2";
+// import "./oo/produto";
+import "./oo/desafio_estatico"
 
 
 

@@ -13,7 +13,10 @@
 // import "./tipos/desafioContaCorrente";
 // import "./oo/class_2";
 // import "./oo/produto";
-import "./oo/desafio_estatico"
+// import "./oo/desafio_estatico"
+// import "./interfaces/usuario"
+// import "./interfaces/flexivel"
+import "./interfaces/funcao"
 
 
 

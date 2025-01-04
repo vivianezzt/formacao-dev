@@ -1,7 +1,8 @@
-export default function Page() {
-  return (
-    <>
-      <h1>Exemplo 1</h1>
-    </>
-  );
+export default function Page(){
+return (
+    <div>
+        <h1>Pagina inicial - exemplo 1</h1>
+    </div>
+)
+    
 }

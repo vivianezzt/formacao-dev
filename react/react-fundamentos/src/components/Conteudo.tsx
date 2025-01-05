@@ -1,16 +1,16 @@
-export default function Conteudo() {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export default function Conteudo(props: any) {
+  console.log(props);
   return (
     <div
       className="
         flex 
         flex-1 
-        justify-center 
-        items-center
+        items-start
+        p-4 
         text-2xl rounded-lg
         bg-emerald-500 
         "
-    >
-      Conteúdo
-    </div>
+    >{props.children}</div>
   );
 }

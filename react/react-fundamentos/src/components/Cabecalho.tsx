@@ -1,16 +1,19 @@
+interface CabecalhoProps {
+  titulo: string
+  subtitulo: string
+  className?: string
+  children?: string
+}
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export default function Cabecalho(props: any) {
-  console.log(props.titulo);
-  console.log(props.subtitulo);
+export default function Cabecalho(props: CabecalhoProps) {
   return (
     <div
-      className="
+      className={`
         flex flex-col
         justify-center items-center
-        h-36 
         font-bold
-        bg-purple-600 p-4
-        rounded-md"
+        bg-purple-600
+        rounded-lg ${props.className ?? ''}`}
     >
       <h1 className="text-2xl">{props.titulo}</h1>
       <h2>{props.subtitulo}</h2>

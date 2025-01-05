@@ -1,18 +1,16 @@
-import Cabecalho from "@/components/Cabecalho";
-import Conteudo from "@/components/Conteudo";
-import Rodape from "@/components/Rodape";
+
+import Pagina from "@/components/Pagina";
+// import Link from "next/link";
 
 export default function Page() {
   return (
-    <div
-      className="
-        flex flex-col 
-        gap-4 h-screen
-        p-4"
-    >
-      <Cabecalho titulo="Minha aplicação" subtitulo="Melhor app da web"/>
-      <Conteudo />
-      <Rodape />
-    </div>
+    <Pagina titulo="Fundamentos" subtitulo="Primeira página">
+      <ul>
+        <li>Ana</li>
+        <li>João</li>
+        <li>Pedro</li>
+        <li>Zico</li>
+      </ul>
+    </Pagina>
   );
 }

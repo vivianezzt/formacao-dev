@@ -1,16 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export default function Conteudo(props: any) {
-  console.log(props);
+interface ConteudoProps {
+  children: any
+}
+
+export default function Conteudo(props: ConteudoProps) {
   return (
-    <div
-      className="
-        flex 
-        flex-1 
-        items-start
-        p-4 
-        text-2xl rounded-lg
-        bg-emerald-500 
-        "
-    >{props.children}</div>
-  );
+      <div className={`
+          flex items-start flex-1 p-4
+          bg-zinc-900 text-3xl
+      `}>
+          {props.children}
+      </div>
+  )
 }

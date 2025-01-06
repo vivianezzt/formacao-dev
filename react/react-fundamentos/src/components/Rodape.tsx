@@ -12,9 +12,7 @@ export default function Rodape(props: RodapeProps
       className="
         h-16 flex justify-between
         items-center
-        text-xl px-10
-        bg-cyan-600 
-        rounded-md"
+        text-base text-zinc-500 px-10 bg-zinc-900 border-t border-zinc-800"
     >
       <span>{props.textoEsquerda}</span>
       <span>{props.textoDireita}</span>

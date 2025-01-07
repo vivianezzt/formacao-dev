@@ -6,14 +6,22 @@ export class Produto {
 		public estoque: number,
 		private _desconto?: number | undefined
 	) {
+		if(!nome){
+			throw new Error("Nome não pode ser vazio")
+		}
 		if (nome.length < 3) {
 			throw new Error("Nome deve ter no minímo 3 caracteres");
 		}
-
+		
+		if(!precoOriginal && precoOriginal !== 0){
+			throw new Error("Preço não pode ser vazio")
+		}
 		if (precoOriginal <= 0) {
 			throw new Error("Preço deve ser positivo");
 		} 
-
+		if(!estoque && estoque !== 0){
+			throw new Error("Estoque não pode ser vazio")
+		}
 		if (estoque <= 0) {
 			throw new Error("Estoque deve ser positivo");
 		} 
@@ -25,6 +33,9 @@ export class Produto {
 		if (desconto !== 0 && !desconto) {
 			return preco;
 		}
+		if(desconto <= 0){
+			throw new Error("Desconto deve ser positivo")
+		}
 		if (desconto > 0 && desconto < 1) { //0.8 = 80%, 80 = - R$80
 			return preco * (1 - desconto);
 		} else {
@@ -34,6 +45,7 @@ export class Produto {
 
 	set desconto(novoDesconto: number) {
 		this.precoAtual = this.aplicarDesconto(this.precoOriginal, novoDesconto);
+		this._desconto = novoDesconto
 	}
 
 	get desconto(): number | undefined {
@@ -41,6 +53,9 @@ export class Produto {
 	}
 
 	reduzirEstoque(quantidade: number): void {
+		if(quantidade <= 0){
+			throw new Error("Não é possivel alterar o estoque")
+		}
 		if (quantidade > this.estoque) {
 			throw new Error("Estoque insuficiente");
 		}
@@ -48,6 +63,9 @@ export class Produto {
 	}
 
 	aumentarEstoque(quantidade: number): void {
+		if(quantidade < 0){
+			throw new Error("Não é possivel alterar o estoque")
+		}
 		this.estoque += quantidade;
 	}
 

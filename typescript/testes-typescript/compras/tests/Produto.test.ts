@@ -135,6 +135,15 @@ describe("Classe Produto", () => {
           .build();
       expect(p).toThrow("Desconto deve ser positivo");
     });
+    test("Deve fazer com que o produto tenha o desconto 0 se o desconto for maior que o preço", () => {
+      const preco = 10
+      const p = new ProdutoBuilder()
+            .padrao()
+            .comPrecoOriginal(preco)
+            .comDesconto(preco*2)
+            .build()
+        expect(p.precoAtual).toBe(0)
+    })
   });
 
   describe("Ao mudar o desconto", () => {

@@ -5,9 +5,9 @@ jest.mock("../src/Calculadora", () => {
     __esModule: true,
     default: {
         ...original.default,
-    soma: jest.fn().mockReturnValue(10),
-    sub: jest.fn()
-    }
+        soma: jest.fn().mockReturnValue(10),
+        sub: jest.fn()
+        }
     
    }
 })

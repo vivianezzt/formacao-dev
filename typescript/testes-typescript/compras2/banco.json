@@ -1,0 +1,133 @@
+{
+  "usuarios": [
+    {
+      "id": "0859",
+      "email": "ana@mail.com",
+      "senha": "123456",
+      "pedidoAtual": {
+        "id": 1,
+        "produtos": [
+          {
+            "produto": {
+              "nome": "Tênis",
+              "precoOriginal": 99.99,
+              "precoAtual": 99.99,
+              "estoque": 8
+            },
+            "quantidade": 4
+          }
+        ],
+        "finalizado": true
+      },
+      "historicoPedidos": [
+        {
+          "id": 1,
+          "produtos": [
+            {
+              "produto": {
+                "nome": "Camiseta",
+                "precoOriginal": 45,
+                "estoque": 4,
+                "precoAtual": 45
+              },
+              "quantidade": 2
+            },
+            {
+              "produto": {
+                "nome": "Calça",
+                "precoOriginal": 59.99,
+                "estoque": 2,
+                "precoAtual": 59.99
+              },
+              "quantidade": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deee",
+      "email": "maria@mail.com",
+      "senha": "123456",
+      "pedidoAtual": {
+        "id": 1,
+        "produtos": [],
+        "finalizado": false
+      },
+      "historicoPedidos": [
+        {
+          "id": 2,
+          "produtos": [
+            {
+              "produto": {
+                "nome": "Tênis",
+                "precoOriginal": 99.99,
+                "estoque": 11,
+                "precoAtual": 99.99
+              },
+              "quantidade": 1
+            },
+            {
+              "produto": {
+                "nome": "Boné",
+                "precoOriginal": 19.5,
+                "estoque": 2,
+                "precoAtual": 19.5
+              },
+              "quantidade": 1
+            }
+          ],
+          "finalizado": true
+        }
+      ]
+    },
+    {
+      "id": "fdd8",
+      "email": "ricardo@mail.com",
+      "senha": "123456",
+      "pedidoAtual": {
+        "id": 0,
+        "produtos": [],
+        "finalizado": false
+      },
+      "historicoPedidos": []
+    }
+  ],
+  "produtos": [
+    {
+      "id": "4d21",
+      "nome": "Camiseta",
+      "precoOriginal": 45,
+      "precoAtual": 45,
+      "estoque": 10
+    },
+    {
+      "id": "8c9a",
+      "nome": "Calça",
+      "precoOriginal": 59.99,
+      "precoAtual": 59.99,
+      "estoque": 5
+    },
+    {
+      "id": "7337",
+      "nome": "Tênis",
+      "precoOriginal": 99.99,
+      "precoAtual": 99.99,
+      "estoque": 12
+    },
+    {
+      "id": "9d6f",
+      "nome": "Boné",
+      "precoOriginal": 19.5,
+      "precoAtual": 19.5,
+      "estoque": 3
+    },
+    {
+      "id": "76b9",
+      "nome": "Meia",
+      "precoOriginal": 8,
+      "precoAtual": 8,
+      "estoque": 8
+    }
+  ]
+}

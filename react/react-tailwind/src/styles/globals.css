@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb))
+}
+@layer components {
+  .btn{
+    @apply px-4 py-2 rounded-md;
+    @apply text-base;
+  }
+  .btn-info {
+    @apply btn;
+    @apply bg-blue-500 hover:bg-blue-700;
+  }
+  .btn-sucess {
+    @apply btn;
+    @apply bg-green-500 hover:bg-green-700;
+
+  }
+  .btn-error {
+    @apply btn;
+    @apply bg-red-500 hover:bg-red-700;
+  }
+}
